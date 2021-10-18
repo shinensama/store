@@ -186,7 +186,6 @@ while True:
     index = int(input("请输入您的操作："))
     if index == 1:
         useradd()
-        print(bank)
     elif index == 2:
         storage()
     elif index == 3:
