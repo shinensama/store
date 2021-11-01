@@ -1,0 +1,105 @@
+class Cup:
+    __h = 0
+    __volume = 0
+    __colour = ""
+    __texture = ""
+
+    def seth(self, h):
+        if h < 0 or h > 50:
+            print("不支持此高度的水杯")
+        else:
+            self.__h = h
+
+    def geth(self):
+        return self.__h
+
+    def setvolume(self, volume):
+        if volume < 0:
+            print("没有此容积的水杯")
+
+    def getvolume(self):
+        return self.__volume
+
+    def setcolour(self, colour):
+        if colour != "红" and colour != "橙" and colour != "黄" and colour != "绿" and colour != "青" and colour != "蓝" and colour != "紫":
+            print("不支持此颜色的水杯")
+        else:
+            self.__colour = colour
+
+    def getcolour(self):
+        return self.__colour
+
+    def settexture(self, texture):
+        self.__texture = texture
+
+    def gettexture(self):
+        return self.__volume
+
+    def storage(self, kind):
+        print(self.__colour, "色的水杯中装着", self.__volume, "升的", kind)
+
+
+cup = Cup()
+
+
+class Laptop:
+    __screenSize = 0
+    __price = 0
+    __cpu = ""
+    __memorySize = 0
+    __standbyTime = 0
+
+    def setscreenSize(self, screenSize):
+        if screenSize < 6 or screenSize > 22:
+            print("没有此尺寸的笔记本电脑")
+        else:
+            self.__screenSize = screenSize
+
+    def getscreenSize(self):
+        return self.__screenSize
+
+    def setprice(self, price):
+        if price <= 0:
+            print("做慈善？")
+        else:
+            self.__price = price
+
+    def getprice(self):
+        return self.__price
+
+    def setcpu(self, cpu):
+        self.__cpu = cpu
+
+    def getcpu(self):
+        return self.__cpu
+
+    def setmemorySize(self, memorySize):
+        if memorySize <= 0:
+            print("内存大小非法")
+        else:
+            self.__memorySize = memorySize
+
+    def getmemorySize(self):
+        return self.__memorySize
+
+    def setstandbyTime(self, standbyTime):
+        if standbyTime <= 0:
+            print("垃圾电脑！")
+        else:
+            self.__standbyTime = standbyTime
+
+    def getstandbyTime(self):
+        return self.__standbyTime
+
+    def typewriting(self, user, brand):
+        print(user, "正在用", brand, "品牌的笔记本电脑练习打字")
+
+    def playGame(self, game):
+        print("满足屏幕大小：", self.__screenSize, "寸、CPU型号：", self.__cpu, "、运行内存大小：", self.__memorySize,
+              "G的笔记本电脑达到了玩", game, "所需的最低配置")
+
+    def watchVideo(self, video):
+        print(self.__screenSize, "寸的笔记本电脑用来看", video, "正合适")
+
+
+laptop = Laptop()
