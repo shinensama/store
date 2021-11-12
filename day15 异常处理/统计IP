@@ -1,0 +1,9 @@
+f = open(file="baidu_x_system.log", mode="r", encoding="utf-8")
+data = {}
+for i in f.readlines():
+    ip = i.split()
+    if ip[0] in data:
+        data[ip[0]] += 1
+    else:
+        data[ip[0]] = 1
+print(data)
